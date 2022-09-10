@@ -5,11 +5,11 @@ This process will help while continuous development & debugging of the code, Her
 
 Description:
 
-1. Install the ASP.NET Core Runtime(Hosting Bundle) from the official Microsoft website.
+1. Prerequisite: Install the ASP.NET Core Runtime(Hosting Bundle) from the official Microsoft website.
 	- Search for the .Net core Hosting bundle and choose Microsoft's official site.
 	- Download the suitable version from the list
 
-2. Create the .Net core Web applications
+2. Create the .Net core Web applications and made the following changes.
 	- Go to the folder > Properties > launchsettings.json > open the file and edit as below.
 	- Add the below section under the existing "profiles" JSON.
 			"IIS": {
@@ -28,7 +28,7 @@ Description:
 				"sslPort": 0
 			   }
 4. Go to the Solution explorer > Select the Project > "Alt + Enter" or "Right Click and Select Properties"
-		- go to the Debug > General > Open debug launch profiles UI.
+		- Go to the Debug > General > Open debug launch profiles UI.
 		- Select the IIS profile from the list
 		- Make sure the AppURL, URL is correctly set as the IIS profile launch URL (i.e. http://localhost:5000)
 			
@@ -38,9 +38,9 @@ Description:
 		- Physical Path > Project folder path location
 		- Port: any port number i.e 5000
 
-6. 	Build the application and run the URL - http://localhost:5000
-7. And to Attach & debug the application, Go to the Visual Studio and Press Ctrl+Alt+P
-	- find the Process > W3wp.exe i.e In the search section enter 'W3'
+6. Build the application and run the URL - http://localhost:5000
+7. Now, to Attach & debug the application, Go to the Visual Studio and Press Ctrl+Alt+P
+	- Find the Process > W3wp.exe i.e In the search section enter 'W3'
 	- Mark the checkbox checked > Show processes for all users
 	- And Press the attach button.
 	- Set the debug point.
